@@ -71,19 +71,12 @@ jobs:
           gmake -j$(sysctl -n hw.physicalcpu)
           TAG=$(git describe --tags --abbrev=0)
           mv ./Application/Dopamine.tipa  "./Application/Dopamine2xRoothide.tipa"
-          mv ./Application/Dopamine.ipa  "./Application/Dopamine2xRoothide.ipa"
           echo "tag=${TAG}" >> $GITHUB_ENV
 
-      - name: Upload .tipa Artifacts
-        id: dopamine-latest-tipa-upload
+      - name: Upload Artifacts
+        id: dopamine-latest-upload
         uses: actions/upload-artifact@v4
         with:
-         path: |
+          name: Dopamine2xRoothide.tipa
+          path: |
             ${{ github.workspace }}/Application/Dopamine2xRoothide.tipa
-          
-      - name: Upload .ipa Artifacts
-        id: dopamine-latest-ipa-upload
-        uses: actions/upload-artifact@v4
-        with:
-         path: |
-            ${{ github.workspace }}/Application/Dopamine2xRoothide.ipa
