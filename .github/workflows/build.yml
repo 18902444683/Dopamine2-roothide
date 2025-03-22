@@ -1,4 +1,4 @@
-name: "*** build tipa file ***"
+name: "Build Dopamine2.x with roothide"
 
 on:
   schedule:
@@ -60,7 +60,7 @@ jobs:
         run: |
           brew install libarchive
 
-      - name: Build
+      - name: Build Dopamine
         run: |
           set -x
           export BASEDIR="$(pwd)"
@@ -73,7 +73,7 @@ jobs:
           mv ./Application/Dopamine.tipa  "./Application/roothide-Dopamine2-v${TAG}.tipa"
           echo "tag=${TAG}" >> $GITHUB_ENV
 
-      - name: Upload Artifact
+      - name: Upload Artifacts
         id: dopamine-latest-upload
         uses: actions/upload-artifact@v4
         with:
