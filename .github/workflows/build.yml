@@ -74,10 +74,16 @@ jobs:
           mv ./Application/Dopamine.ipa  "./Application/Dopamine2xRoothide.ipa"
           echo "tag=${TAG}" >> $GITHUB_ENV
 
-      - name: Upload Artifacts
-        id: dopamine-latest-upload
+      - name: Upload .tipa Artifacts
+        id: dopamine-latest-tipa-upload
         uses: actions/upload-artifact@v4
         with:
          path: |
             ${{ github.workspace }}/Application/Dopamine2xRoothide.tipa
+          
+      - name: Upload .ipa Artifacts
+        id: dopamine-latest-ipa-upload
+        uses: actions/upload-artifact@v4
+        with:
+         path: |
             ${{ github.workspace }}/Application/Dopamine2xRoothide.ipa
