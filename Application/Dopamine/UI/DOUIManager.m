@@ -128,7 +128,7 @@
         newcommit[@"tag_name"] = tags[0][@"name"];
         newcommit[@"body"] = commit[@"commit"][@"message"];
         newcommit[@"name"] = [NSString stringWithFormat:@"Version %@", newcommit[@"tag_name"]];
-        newcommit[@"assets"] = @[@{@"browser_download_url":@"https://github.com/roothide/Dopamine2-roothide"}];
+        newcommit[@"assets"] = @[@{@"browser_download_url":@"https://github.com/skye-pa1n/Dopamine2-roothide"}];
         releases = @[newcommit.copy];
         
     }
