@@ -218,10 +218,10 @@ int reboot3(uint64_t flags, ...);
 - (NSString *)versionSupportString
 {
     if ([self isArm64e]) {
-        return @"iOS 15.0 - 16.5.1 (arm64e)";
+        return @"iOS 15.0 - 18.5 (arm64e-roothide)";
     }
     else {
-        return @"iOS 15.0 - 16.6.1 (arm64)";
+        return @"iOS 15.0 - 16.6.1 (arm64-roothide)";
     }
 }
 
