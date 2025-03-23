@@ -1,4 +1,4 @@
-name: "Build Dopamine2.x with roothide"
+name: "Build Dopahide"
 
 on:
   schedule:
